@@ -6,8 +6,8 @@ on:
           - main
 
 jobs:
-    release:
-        name: 🚀 release
+    push:
+        name: "🚀 release"
         runs-on: ubuntu-latest
         steps:
             - name: 📚 checkout
