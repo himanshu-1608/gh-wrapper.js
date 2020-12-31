@@ -1,0 +1,32 @@
+{
+  "name": "gh-wrapper",
+  "version": "1.0.0",
+  "description": "A GitHub REST API wrapper to make work of developers easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshu-1608/gh-wrapper.js.git"
+  },
+  "keywords": [
+    "github",
+    "github-wrapper",
+    "octocat",
+    "wrapper",
+    "github",
+    "rest",
+    "api",
+    "GitHub",
+    "REST",
+    "API",
+    "automation"
+  ],
+  "author": "Himanshu Yadav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/himanshu-1608/gh-wrapper.js/issues"
+  },
+  "homepage": "https://github.com/himanshu-1608/gh-wrapper.js#readme"
+}
