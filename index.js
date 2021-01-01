@@ -5,4 +5,4 @@ const ghClient = {};
 ghClient.getUserByName = userByName;
 ghClient.getUsersByName = usersByName;
 
-export default ghClient;
+module.exports = ghClient;
