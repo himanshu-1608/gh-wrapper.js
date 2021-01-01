@@ -1,4 +1,4 @@
-import { userByName, usersByName } from "./utils/users";
+const { userByName, usersByName } = require("./utils/users");
 
 const ghClient = {};
 

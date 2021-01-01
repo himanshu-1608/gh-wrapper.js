@@ -11,7 +11,7 @@ usersByName = (userNames) => {
     return `Got the users, now searching 'em.`;
 }
 
-export default {
+module.exports = {
     userByName,
     usersByName
 };
