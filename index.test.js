@@ -1,7 +1,8 @@
 const ghClient = require('./index');
 console.log("Starting tests...");
 
-console.log(`Value of ghClient:\n` + ghClient);
+console.log(`Value of ghClient:`);
+console.log(ghClient);
 
 const val1 = ghClient.getUserByName("himanshu-1608");
 const val2 = ghClient.getUsersByName(
