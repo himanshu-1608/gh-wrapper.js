@@ -47,6 +47,10 @@ const {
     listUserGists
 } = require("./utils/gist");
 
+const {
+    textToMarkdown
+} = require("./utils/markdown");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -66,8 +70,7 @@ function assignGistFunctionalities() {
 }
 
 function assignMarkdownFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.textToMarkdown = textToMarkdown;
 }
 
 function assignOrgsFunctionalities() {

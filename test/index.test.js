@@ -79,6 +79,32 @@ const testActivityModule = async _ => {
 const testGistModule = async _ => {
     await ghClient.getGistById('wq3kjg324');
     await ghClient.getListOfUserGists('himanshu-1608');
+
+    setTimeout(testMarkdownModule, 2000);
+};
+
+//Markdown Module Testing
+
+const testMarkdownModule = async _ => {
+    await ghClient.textToMarkdown(
+        `
+        # what a header
+        
+        ## Second header here
+
+        [link click here](www.google.com)
+
+        - First Unordered List Point
+        - Seconf Unordered List Point
+        - Third Unordered List Point
+        
+        1. First Ordered List Point
+        2. Seconf Ordered List Point
+        3. Third Ordered List Point
+        `
+    );
+
+    //setTimeout(shit, 2000);
 };
 
 //Start Chain Reaction here:
