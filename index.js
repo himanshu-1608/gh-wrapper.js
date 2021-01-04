@@ -6,6 +6,20 @@ const {
     AFollowsB
 } = require("./utils/users");
 
+const {
+    reposOfUser,
+    reposOfOrg,
+    repoContributors,
+    repoCollaborators,
+    repoDetails,
+    repoLangs,
+    repoTopics,
+    repoCommits,
+    repoReadme,
+    repoForks,
+    repoHostingPage
+} = require("./utils/repos");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -39,8 +53,17 @@ function assignPullsFunctionalities() {
 }
 
 function assignReposFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getRepoListOfUser = reposOfUser;
+    ghClient.getRepoListOfOrg = reposOfOrg;
+    ghClient.getRepoContributors = repoContributors;
+    ghClient.getRepoCollaborators = repoCollaborators;
+    ghClient.getRepoDetail = repoDetails;
+    ghClient.getRepoLangs = repoLangs;
+    ghClient.getRepoTopics = repoTopics;
+    ghClient.getRepoCommits = repoCommits;
+    ghClient.getRepoReadme = repoReadme;
+    ghClient.getRepoForks = repoForks;
+    ghClient.getRepoHostingPage = repoHostingPage;
 }
 
 function assignUserFunctionalities() {
