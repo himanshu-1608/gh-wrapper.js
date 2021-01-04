@@ -22,7 +22,8 @@
 - List repository collaborators (#list-repository-collaborators)
 - List commits (#list-commits)
 - Get a repository README (#get-a-repository-readme)
-- List forks (#list-forks)1. Get a GitHub Pages site (#get-a-github-pages-site)
+- List forks (#list-forks)
+- Get a GitHub Pages site (#get-a-github-pages-site)
 
 ## [Link 3](https://docs.github.com/en/free-pro-team@latest/rest/reference/orgs): /orgs
 
