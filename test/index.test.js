@@ -53,7 +53,7 @@ const testProjectModule = async _ => {
     await ghClient.getListOfUserProjects('himanshu-1608');
 
     setTimeout(testActionsModule, 2000);
-}
+};
 
 //Actions Module Testing
 
@@ -61,7 +61,7 @@ const testActionsModule = async _ => {
     await ghClient.getListOfWorkflows('himanshu-1608', 'gh-wrapper.js');
 
     setTimeout(testActivityModule, 2000);
-}
+};
 
 //Activity Module Testing
 
@@ -70,7 +70,16 @@ const testActivityModule = async _ => {
     await ghClient.getRepoWatchers('muskemteers', 'OurSQL');
     await ghClient.getStarredReposByUser('himanshu-1608');
     await ghClient.getWatchReposByUser('himanshu-1608');
-}
+
+    setTimeout(testGistModule, 2000);
+};
+
+//Gist Module Testing
+
+const testGistModule = async _ => {
+    await ghClient.getGistById('wq3kjg324');
+    await ghClient.getListOfUserGists('himanshu-1608');
+};
 
 //Start Chain Reaction here:
 

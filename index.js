@@ -42,6 +42,11 @@ const {
     listUserWatching
 } = require("./utils/activity");
 
+const {
+    gistDetails,
+    listUserGists
+} = require("./utils/gist");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -56,8 +61,8 @@ function assignActivityFunctionalities() {
 }
 
 function assignGistFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getGistById = gistDetails;
+    ghClient.getListOfUserGists = listUserGists;
 }
 
 function assignMarkdownFunctionalities() {
