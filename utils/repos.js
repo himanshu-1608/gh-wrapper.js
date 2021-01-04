@@ -1,5 +1,26 @@
-const reposOfUser = (userName) => {
-    console.log(`The owner ${userName}'s has following repos: Repo1, repo2, repo3, etc.`);
+const reposOfUser = async(userName) => {
+    try {
+        promise = await fetch(`https://api.github.com/users/${userName}`, {
+            method: 'get',
+            headers: {
+                'accept': 'application/vnd.github.v3+json',
+                'Authorization': `token ${process.env.token}`
+            }
+        });
+        if (promise.status == 404) {
+            return {
+                "responseCode": promise.status,
+                "message": promise.statusText,
+                "responseMessage": "This is a standard error response...check the username added in your function argument"
+            };
+        }
+        user = await promise.json();
+        user.responseCode = 200;
+        user.responseMessage = "The response is a JSON object.";
+        return user;
+    } catch (err) {
+        return err;
+    }
 };
 
 const reposOfOrg = (orgName) => {

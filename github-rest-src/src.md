@@ -13,13 +13,13 @@
 
 ### EndPoints to Inherit:
 
+- List repositories for a user (#list-repositories-for-a-user)
 - Lists repositories for the specified organization (#list-organization-repositories)
-- Get a repository (#get-a-repository)
 - List repository contributors (#list-repository-contributors)
+- List repository collaborators (#list-repository-collaborators)
+- Get a repository (#get-a-repository)
 - List repository languages (#list-repository-languages)
 - Get all repository topics (#get-all-repository-topics)
-- List repositories for a user (#list-repositories-for-a-user)
-- List repository collaborators (#list-repository-collaborators)
 - List commits (#list-commits)
 - Get a repository README (#get-a-repository-readme)
 - List forks (#list-forks)

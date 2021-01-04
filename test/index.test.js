@@ -27,19 +27,20 @@ const testUserModule = async _ => {
 //Repo Module Testing
 
 const testRepoModule = async _ => {
-    await ghClient.getRepoListOfUser('himanshu-1608');
-    await ghClient.getRepoListOfOrg('muskemteers');
-    await ghClient.getRepoContributors('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoCollaborators('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoDetail('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoLangs('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoTopics('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoCommits('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoReadme('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoForks('himanshu-1608', 'OurSQL');
-    await ghClient.getRepoHostingPage('muskemteers', 'OurSQL');
+    const repoList = await ghClient.getRepoListOfUser('himanshu-1608');
+    console.log(repoList);
+    // await ghClient.getRepoListOfOrg('muskemteers');
+    // await ghClient.getRepoContributors('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoCollaborators('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoDetail('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoLangs('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoTopics('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoCommits('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoReadme('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoForks('himanshu-1608', 'OurSQL');
+    // await ghClient.getRepoHostingPage('muskemteers', 'OurSQL');
 
-    setTimeout(testOrgModule, 2000);
+    // setTimeout(testOrgModule, 2000);
 };
 
 //Orgs Module Testing
