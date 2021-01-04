@@ -51,6 +51,11 @@ const {
     textToMarkdown
 } = require("./utils/markdown");
 
+const {
+    listPullReqs,
+    listCommitsOnPR
+} = require("./utils/pulls");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -85,8 +90,8 @@ function assignProjectsFunctionalities() {
 }
 
 function assignPullsFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getListOfPullReqs = listPullReqs;
+    ghClient.getCommitsOfPullReqById = listCommitsOnPR;
 }
 
 function assignReposFunctionalities() {

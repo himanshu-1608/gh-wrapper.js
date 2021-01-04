@@ -104,7 +104,14 @@ const testMarkdownModule = async _ => {
         `
     );
 
-    //setTimeout(shit, 2000);
+    setTimeout(testPullsModule, 2000);
+};
+
+//Pulls Module Testing
+
+const testPullsModule = async _ => {
+    await ghClient.getListOfPullReqs('muskemteers', 'OurSQL');
+    await ghClient.getCommitsOfPullReqById('muskemteers', 'OurSQL', 3);
 };
 
 //Start Chain Reaction here:
