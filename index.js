@@ -20,6 +20,12 @@ const {
     repoHostingPage
 } = require("./utils/repos");
 
+const {
+    orgDetails,
+    userOrgs,
+    listOrgMembers
+} = require("./utils/orgs");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -38,8 +44,9 @@ function assignMarkdownFunctionalities() {
 }
 
 function assignOrgsFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getOrgDetails = orgDetails;
+    ghClient.getUserOrgs = userOrgs;
+    ghClient.getOrgAllMembers = listOrgMembers;
 }
 
 function assignProjectsFunctionalities() {
