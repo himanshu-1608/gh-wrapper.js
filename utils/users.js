@@ -23,8 +23,8 @@ listFollowing = (userName) => {
     );
 }
 
-AFollowsB = (user1, user2) => {
-    console.log(`${user1} follows ${user2} if the content is not null or if no 404 error`);
+AFollowsB = (followerToCheck, hisGod) => {
+    console.log(`${followerToCheck} follows ${hisGod} if the response code is 200ish, and doesn't if response is 400ish`);
 }
 
 module.exports = {
