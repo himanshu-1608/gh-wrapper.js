@@ -11,7 +11,26 @@ usersByName = (userNames) => {
     return `Got the users, now searching 'em.`;
 }
 
+listFollowers = (userName) => {
+    console.log(
+        `Follower list of ${userName}: Follower 1, Follower2`
+    );
+}
+
+listFollowing = (userName) => {
+    console.log(
+        `User ${userName} follows these people: Following1, Following2`
+    );
+}
+
+AFollowsB = (user1, user2) => {
+    console.log(`${user1} follows ${user2} if the content is not null or if no 404 error`);
+}
+
 module.exports = {
     userByName,
-    usersByName
+    usersByName,
+    listFollowers,
+    listFollowing,
+    AFollowsB
 };

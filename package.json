@@ -4,7 +4,7 @@
     "description": "A GitHub REST API wrapper to make work of developers easy",
     "main": "index.js",
     "scripts": {
-        "test": "node index.test.js",
+        "test": "node ./test/index.test.js",
         "prePublishOnly": "npm test"
     },
     "repository": {
