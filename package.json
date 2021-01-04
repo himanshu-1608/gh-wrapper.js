@@ -29,5 +29,8 @@
     "bugs": {
         "url": "https://github.com/himanshu-1608/gh-wrapper.js/issues"
     },
-    "homepage": "https://github.com/himanshu-1608/gh-wrapper.js#readme"
+    "homepage": "https://github.com/himanshu-1608/gh-wrapper.js#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0"
+    }
 }

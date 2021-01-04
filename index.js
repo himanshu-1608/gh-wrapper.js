@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { userByName, usersByName } = require("./utils/users");
 
 const ghClient = {};
