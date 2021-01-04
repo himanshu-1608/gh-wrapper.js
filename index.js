@@ -26,6 +26,11 @@ const {
     listOrgMembers
 } = require("./utils/orgs");
 
+const {
+    listOrgProjects,
+    listUserProjects
+} = require("./utils/projects");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
@@ -50,8 +55,8 @@ function assignOrgsFunctionalities() {
 }
 
 function assignProjectsFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getListOfOrgProjects = listOrgProjects;
+    ghClient.getListOfUserProjects = listUserProjects;
 }
 
 function assignPullsFunctionalities() {

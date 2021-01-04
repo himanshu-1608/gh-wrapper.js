@@ -14,4 +14,4 @@ module.exports = {
     orgDetails,
     userOrgs,
     listOrgMembers
-}
+};

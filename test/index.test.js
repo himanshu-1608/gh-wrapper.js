@@ -36,15 +36,24 @@ const testRepoModule = async _ => {
     setTimeout(testOrgModule, 2000);
 };
 
-//Org Module Testing
+//Orgs Module Testing
 
 const testOrgModule = async _ => {
     await ghClient.getOrgDetails('muskemteers');
     await ghClient.getUserOrgs('himanshu-1608');
     await ghClient.getOrgAllMembers('muskemteers');
 
-    //setTimeout(shit, 2000);
+    setTimeout(testProjectModule, 2000);
 };
+
+//Projects Module Testing
+
+const testProjectModule = async _ => {
+    await ghClient.getListOfOrgProjects('muskemteers');
+    await ghClient.getListOfUserProjects('himanshu-1608');
+
+    //setTimeout(shit, 2000);
+}
 
 setTimeout(testUserModule, 2000);
 
