@@ -1,17 +1,26 @@
 const ghClient = require('../index');
 console.log("Starting tests...");
 
-console.log(`ghClient Object:`);
-console.log(ghClient);
+// console.log(`ghClient Object:`);
+// console.log(ghClient);
 
 //User Module Testing
 
 const testUserModule = async _ => {
-    await ghClient.getUserByName("himanshu-1608");
-    await ghClient.getFollowersOf('himanshu-1608');
-    await ghClient.getFollowingOf('himanshu-1608');
-    await ghClient.checkSpecificFollower('himanshu-1608', 'mostlypanda');
-
+    // const user = await ghClient.getUserByName("himanshu-1608");
+    // console.log(user);
+    // const followerList = await ghClient.getFollowersOf('himanshu-1608');
+    // console.log(followerList);
+    // const followingList = await ghClient.getFollowingOf('himanshu-1608');
+    // console.log(followingList);
+    // const followerToCheck = "himanshu-1608";
+    // const hisSupreme = "mostlypanda";
+    // const checker = await ghClient.checkSpecificFollower(followerToCheck, hisSupreme);
+    // if (checker) {
+    //     console.log(`${followerToCheck} definitely follows ${hisSupreme}...`);
+    // } else {
+    //     console.log(`Either username entered are wrong or he is not following hisSupreme`);
+    // }
     setTimeout(testRepoModule, 2000);
 };
 
@@ -115,4 +124,4 @@ const testPullsModule = async _ => {
 
 setTimeout(testUserModule, 2000);
 
-throw new Error("Never publish without checking that goddamn c0ns0le");
+//throw new Error("Never publish without checking that goddamn c0ns0le");

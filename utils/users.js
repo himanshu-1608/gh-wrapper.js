@@ -1,21 +1,97 @@
-const userByName = (userName) => {
-    return `Got the user: ${userName}, now searching it.`;
+require('dotenv').config();
+const fetch = require('node-fetch');
+
+const userByName = async(userName) => {
+    try {
+        promise = await fetch(`https://api.github.com/users/${userName}`, {
+            method: 'get',
+            headers: {
+                'accept': 'application/vnd.github.v3+json',
+                'Authorization': `token ${process.env.token}`
+            }
+        });
+        if (promise.status == 404) {
+            return {
+                "responseCode": promise.status,
+                "message": promise.statusText,
+                "responseMessage": "This is a standard error response...check the username added in your function argument"
+            };
+        }
+        user = await promise.json();
+        user.responseCode = 200;
+        user.responseMessage = "The response is a JSON object.";
+        return user;
+    } catch (err) {
+        return err;
+    }
 }
 
-const listFollowers = (userName) => {
-    console.log(
-        `Follower list of ${userName}: Follower 1, Follower2`
-    );
+const listFollowers = async(userName) => {
+    try {
+        promise = await fetch(`https://api.github.com/users/${userName}/followers`, {
+            method: 'get',
+            headers: {
+                'accept': 'application/vnd.github.v3+json',
+                'Authorization': `token ${process.env.token}`
+            }
+        });
+        if (promise.status == 404) {
+            return {
+                "responseCode": promise.status,
+                "message": promise.statusText,
+                "responseMessage": "This is a standard error response...check the username added in your function argument"
+            };
+        }
+        followerList = await promise.json();
+        followerList.responseCode = 200;
+        followerList.responseMessage = "The response is a JSON array.";
+        return followerList;
+    } catch (err) {
+        return err;
+    }
 }
 
-const listFollowing = (userName) => {
-    console.log(
-        `User ${userName} follows these people: Following1, Following2`
-    );
+const listFollowing = async(userName) => {
+    try {
+        promise = await fetch(`https://api.github.com/users/${userName}/following`, {
+            method: 'get',
+            headers: {
+                'accept': 'application/vnd.github.v3+json',
+                'Authorization': `token ${process.env.token}`
+            }
+        });
+        if (promise.status == 404) {
+            return {
+                "responseCode": promise.status,
+                "message": promise.statusText,
+                "responseMessage": "This is a standard error response...check the username added in your function argument"
+            };
+        }
+        followingList = await promise.json();
+        followingList.responseCode = 200;
+        followingList.responseMessage = "The response is a JSON array.";
+        return followingList;
+    } catch (err) {
+        return err;
+    }
 }
 
-const AFollowsB = (followerToCheck, hisGod) => {
-    console.log(`${followerToCheck} follows ${hisGod} if the response code is 200ish, and doesn't if response is 400ish`);
+const AFollowsB = async(followerToCheck, hisSupreme) => {
+    try {
+        promise = await fetch(
+            `https://api.github.com/users/${followerToCheck}/following/${hisSupreme}`, {
+                method: 'get',
+                headers: {
+                    'accept': 'application/vnd.github.v3+json',
+                    'Authorization': `token ${process.env.token}`
+                }
+            });
+        if (promise.status == 204) {
+            return true;
+        } else return false;
+    } catch (err) {
+        return err;
+    }
 }
 
 module.exports = {
