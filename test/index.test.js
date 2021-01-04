@@ -1,7 +1,7 @@
 const ghClient = require('../index');
 console.log("Starting tests...");
 
-console.log(`Value of ghClient:`);
+console.log(`ghClient Object:`);
 console.log(ghClient);
 
 //User Module Testing
@@ -118,4 +118,4 @@ const testPullsModule = async _ => {
 
 setTimeout(testUserModule, 2000);
 
-//throw new Error("Never publish without checking that goddamn c0ns0le");
+throw new Error("Never publish without checking that goddamn c0ns0le");
