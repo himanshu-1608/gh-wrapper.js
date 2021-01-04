@@ -41,32 +41,33 @@
 - List user projects (#list-user-projects)
 
 ## [Link 5](https://docs.github.com/en/free-pro-team@latest/rest/reference/actions): /actions
-
 ### EndPoints to Inherit:
 
 - Lists the workflows in a repository (#list-repository-workflows)
-- Lists all workflow runs for a repository (#list-workflow-runs-for-a-repository)
-- List public events for a user (#list-public-events-for-a-user)
-- List repository events (#list-repository-events)
+
+## [Link 6](https://docs.github.com/en/free-pro-team@latest/rest/reference/activity): /activity
+
+### EndPoints to Inherit:
+
 - Lists the people that have starred the repository (#list-stargazers)
 - Lists repositories a user has starred (#list-repositories-starred-by-a-user)
 - Lists the people watching the specified repository (#list-watchers)
 - Lists repositories a user is watching (#list-repositories-watched-by-a-user)
 
-## [Link 6](https://docs.github.com/en/free-pro-team@latest/rest/reference/gists): /gist
+## [Link 7](https://docs.github.com/en/free-pro-team@latest/rest/reference/gists): /gist
 
 ### EndPoints to Inherit:
 
 - Get a Gist (#get-a-gist)
 - List gists for a user (#list-gists-for-a-user)
 
-## [Link 7](https://docs.github.com/en/free-pro-team@latest/rest/reference/markdown): /markdown
+## [Link 8](https://docs.github.com/en/free-pro-team@latest/rest/reference/markdown): /markdown
 
 ### EndPoints to Inherit:
 
 - Render a Markdown document in raw mode (#render-a-markdown-document-in-raw-mode)
 
-## [Link 8](https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls): /pulls
+## [Link 9](https://docs.github.com/en/free-pro-team@latest/rest/reference/pulls): /pulls
 
 ### EndPoints to Inherit:
 

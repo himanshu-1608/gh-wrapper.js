@@ -31,11 +31,28 @@ const {
     listUserProjects
 } = require("./utils/projects");
 
+const {
+    listWorkflows
+} = require("./utils/actions");
+
+const {
+    listRepoStargazers,
+    listRepoWatchers,
+    listUserStarred,
+    listUserWatching
+} = require("./utils/activity");
+
 const ghClient = {};
 
 function assignActionsFunctionalities() {
-    ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
+    ghClient.getListOfWorkflows = listWorkflows;
+}
+
+function assignActivityFunctionalities() {
+    ghClient.getRepoStarrers = listRepoStargazers;
+    ghClient.getRepoWatchers = listRepoWatchers;
+    ghClient.getStarredReposByUser = listUserStarred;
+    ghClient.getWatchReposByUser = listUserWatching;
 }
 
 function assignGistFunctionalities() {
@@ -87,6 +104,7 @@ function assignUserFunctionalities() {
 }
 
 assignActionsFunctionalities();
+assignActivityFunctionalities();
 assignGistFunctionalities();
 assignMarkdownFunctionalities();
 assignOrgsFunctionalities();

@@ -52,8 +52,27 @@ const testProjectModule = async _ => {
     await ghClient.getListOfOrgProjects('muskemteers');
     await ghClient.getListOfUserProjects('himanshu-1608');
 
-    //setTimeout(shit, 2000);
+    setTimeout(testActionsModule, 2000);
 }
+
+//Actions Module Testing
+
+const testActionsModule = async _ => {
+    await ghClient.getListOfWorkflows('himanshu-1608', 'gh-wrapper.js');
+
+    setTimeout(testActivityModule, 2000);
+}
+
+//Activity Module Testing
+
+const testActivityModule = async _ => {
+    await ghClient.getRepoStarrers('muskemteers', 'OurSQL');
+    await ghClient.getRepoWatchers('muskemteers', 'OurSQL');
+    await ghClient.getStarredReposByUser('himanshu-1608');
+    await ghClient.getWatchReposByUser('himanshu-1608');
+}
+
+//Start Chain Reaction here:
 
 setTimeout(testUserModule, 2000);
 
