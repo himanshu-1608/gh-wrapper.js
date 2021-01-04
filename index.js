@@ -1,6 +1,5 @@
 const {
     userByName,
-    usersByName,
     listFollowers,
     listFollowing,
     AFollowsB
@@ -110,7 +109,6 @@ function assignReposFunctionalities() {
 
 function assignUserFunctionalities() {
     ghClient.getUserByName = userByName;
-    ghClient.getUsersByName = usersByName;
     ghClient.getFollowersOf = listFollowers;
     ghClient.getFollowingOf = listFollowing;
     ghClient.checkSpecificFollower = AFollowsB;

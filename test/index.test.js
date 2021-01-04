@@ -8,9 +8,6 @@ console.log(ghClient);
 
 const testUserModule = async _ => {
     await ghClient.getUserByName("himanshu-1608");
-    await ghClient.getUsersByName(
-        ["himanshu-1608", "mostlypanda", "insaiyann", "sindresorhus"]
-    );
     await ghClient.getFollowersOf('himanshu-1608');
     await ghClient.getFollowingOf('himanshu-1608');
     await ghClient.checkSpecificFollower('himanshu-1608', 'mostlypanda');

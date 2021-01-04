@@ -2,15 +2,6 @@ const userByName = (userName) => {
     return `Got the user: ${userName}, now searching it.`;
 }
 
-const usersByName = (userNames) => {
-    console.log("Users By Names: ");
-    for (users of userNames) {
-        console.log(users);
-    }
-    console.log("End of User List");
-    return `Got the users, now searching 'em.`;
-}
-
 const listFollowers = (userName) => {
     console.log(
         `Follower list of ${userName}: Follower 1, Follower2`
@@ -29,7 +20,6 @@ const AFollowsB = (followerToCheck, hisGod) => {
 
 module.exports = {
     userByName,
-    usersByName,
     listFollowers,
     listFollowing,
     AFollowsB
