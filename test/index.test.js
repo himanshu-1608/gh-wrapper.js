@@ -1,8 +1,8 @@
 const ghClient = require('../index');
 console.log("Starting tests...");
 
-// console.log(`ghClient Object:`);
-// console.log(ghClient);
+console.log(`ghClient Object:`);
+console.log(ghClient);
 
 //User Module Testing
 
@@ -21,7 +21,7 @@ const testUserModule = async _ => {
     // } else {
     //     console.log(`Either username entered are wrong or he is not following hisSupreme`);
     // }
-    setTimeout(testRepoModule, 0);
+    setTimeout(testRepoModule, 2000);
 };
 
 //Repo Module Testing
@@ -49,7 +49,7 @@ const testRepoModule = async _ => {
     // console.log(forks);
     // const hostingPage = await ghClient.getRepoHostingPage('muskemteers', 'OurSQL');
     // console.log(hostingPage);
-    setTimeout(testOrgModule, 0);
+    setTimeout(testOrgModule, 2000);
 };
 
 //Orgs Module Testing
@@ -61,7 +61,7 @@ const testOrgModule = async _ => {
     // console.log(userOrgList);
     // const orgMems = await ghClient.getOrgAllMembers('muskemteers');
     // console.log(orgMems);
-    setTimeout(testProjectModule, 0);
+    setTimeout(testProjectModule, 2000);
 };
 
 //Projects Module Testing
@@ -72,7 +72,7 @@ const testProjectModule = async _ => {
     // const userProjects = await ghClient.getListOfUserProjects('mostlypanda');
     // console.log(userProjects);
 
-    setTimeout(testActionsModule, 0);
+    setTimeout(testActionsModule, 2000);
 };
 
 //Actions Module Testing
@@ -81,7 +81,7 @@ const testActionsModule = async _ => {
     // const workflows = await ghClient.getListOfWorkflows('himanshu-1608', 'gh-wrapper.js');
     // console.log(workflows);
 
-    setTimeout(testActivityModule, 0);
+    setTimeout(testActivityModule, 2000);
 };
 
 //Activity Module Testing
@@ -96,7 +96,7 @@ const testActivityModule = async _ => {
     // const userWatches = await ghClient.getWatchReposByUser('himanshu-1608');
     // console.log(userWatches);
 
-    setTimeout(testGistModule, 0);
+    setTimeout(testGistModule, 2000);
 };
 
 //Gist Module Testing
@@ -107,7 +107,7 @@ const testGistModule = async _ => {
     // const userGists = await ghClient.getListOfUserGists('himanshu-1608');
     // console.log(userGists);
 
-    setTimeout(testMarkdownModule, 0);
+    setTimeout(testMarkdownModule, 2000);
 };
 
 //Markdown Module Testing
@@ -128,14 +128,16 @@ const testMarkdownModule = async _ => {
     // 3. Third Ordered List Point`);
     // console.log(markDown);
 
-    setTimeout(testPullsModule, 0);
+    setTimeout(testPullsModule, 2000);
 };
 
 //Pulls Module Testing
 
 const testPullsModule = async _ => {
-    await ghClient.getListOfPullReqs('muskemteers', 'OurSQL');
-    await ghClient.getCommitsOfPullReqById('muskemteers', 'OurSQL', 3);
+    // const pullReqs = await ghClient.getListOfPullReqs('himanshu-1608', 'A2Z-Learning');
+    // console.log(pullReqs);
+    // const pullCommits = await ghClient.getCommitsOfPullReqById('muskemteers', 'OurSQL', 3);
+    // console.log(pullCommits);
 };
 
 //Start Chain Reaction here:
