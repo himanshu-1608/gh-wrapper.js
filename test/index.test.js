@@ -87,12 +87,16 @@ const testActionsModule = async _ => {
 //Activity Module Testing
 
 const testActivityModule = async _ => {
-    await ghClient.getRepoStarrers('muskemteers', 'OurSQL');
-    await ghClient.getRepoWatchers('muskemteers', 'OurSQL');
-    await ghClient.getStarredReposByUser('himanshu-1608');
-    await ghClient.getWatchReposByUser('himanshu-1608');
+    // const repoStarrers = await ghClient.getRepoStarrers('muskemteers', 'OurSQL');
+    // console.log(repoStarrers);
+    // const subscribers = await ghClient.getRepoWatchers('muskemteers', 'OurSQL');
+    // console.log(subscribers);
+    // const userStarred = await ghClient.getStarredReposByUser('himanshu-1608');
+    // console.log(userStarred);
+    // const userWatches = await ghClient.getWatchReposByUser('himanshu-1608');
+    // console.log(userWatches);
 
-    setTimeout(testGistModule, 2000);
+    setTimeout(testGistModule, 0);
 };
 
 //Gist Module Testing
