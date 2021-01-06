@@ -27,10 +27,10 @@ const testUserModule = async _ => {
 //Repo Module Testing
 
 const testRepoModule = async _ => {
-    // const repoList = await ghClient.getRepoListOfUser('himanshu-1608');
-    // console.log(repoList);
-    // const repoList = await ghClient.getRepoListOfOrg('muskemteers');
-    // console.log(repoList);
+    // const repoListUser = await ghClient.getRepoListOfUser('himanshu-1608');
+    // console.log(repoListUser);
+    // const repoListOrg = await ghClient.getRepoListOfOrg('muskemteers');
+    // console.log(repoListOrg);
     // const repoConts = await ghClient.getRepoContributors('himanshu-1608', 'OurSQL');
     // console.log(repoConts);
     // const repoCols = await ghClient.getRepoCollaborators('muskemteers', 'OurSQL');
@@ -55,11 +55,13 @@ const testRepoModule = async _ => {
 //Orgs Module Testing
 
 const testOrgModule = async _ => {
-    await ghClient.getOrgDetails('muskemteers');
-    // await ghClient.getUserOrgs('himanshu-1608');
-    // await ghClient.getOrgAllMembers('muskemteers');
-
-    // setTimeout(testProjectModule, 2000);
+    // const orgData = await ghClient.getOrgDetails('muskemteers');
+    // console.log(orgData);
+    // const userOrgList = await ghClient.getUserOrgs('himanshu-1608');
+    // console.log(userOrgList);
+    // const orgMems = await ghClient.getOrgAllMembers('muskemteers');
+    // console.log(orgMems);
+    setTimeout(testProjectModule, 0);
 };
 
 //Projects Module Testing
