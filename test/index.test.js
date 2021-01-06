@@ -113,25 +113,22 @@ const testGistModule = async _ => {
 //Markdown Module Testing
 
 const testMarkdownModule = async _ => {
-    await ghClient.textToMarkdown(
-        `
-        # what a header
-        
-        ## Second header here
+    // const markDown = await ghClient.textToMarkdown(`# what a header
 
-        [link click here](www.google.com)
+    // ## Second header here
 
-        - First Unordered List Point
-        - Seconf Unordered List Point
-        - Third Unordered List Point
-        
-        1. First Ordered List Point
-        2. Seconf Ordered List Point
-        3. Third Ordered List Point
-        `
-    );
+    // [link click here](www.google.com)
 
-    setTimeout(testPullsModule, 2000);
+    // - First Unordered List Point
+    // - Second Unordered List Point
+    // - Third Unordered List Point
+
+    // 1. First Ordered List Point
+    // 2. Second Ordered List Point
+    // 3. Third Ordered List Point`);
+    // console.log(markDown);
+
+    setTimeout(testPullsModule, 0);
 };
 
 //Pulls Module Testing
