@@ -1,6 +1,6 @@
 {
     "name": "gh-wrapper",
-    "version": "1.1.2",
+    "version": "2.0.0",
     "description": "A GitHub REST API wrapper to make work of developers easy",
     "main": "index.js",
     "scripts": {
