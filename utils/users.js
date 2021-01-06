@@ -1,14 +1,15 @@
-require('dotenv').config();
 const fetch = require('node-fetch');
+require('dotenv').config();
+commonHeaders = {
+    'accept': 'application/vnd.github.v3+json',
+    'Authorization': `token ${process.env.token}`
+};
 
 const userByName = async(userName) => {
     try {
         promise = await fetch(`https://api.github.com/users/${userName}`, {
             method: 'get',
-            headers: {
-                'accept': 'application/vnd.github.v3+json',
-                'Authorization': `token ${process.env.token}`
-            }
+            headers: commonHeaders
         });
         if (promise.status == 404) {
             return {
@@ -30,10 +31,7 @@ const listFollowers = async(userName) => {
     try {
         promise = await fetch(`https://api.github.com/users/${userName}/followers`, {
             method: 'get',
-            headers: {
-                'accept': 'application/vnd.github.v3+json',
-                'Authorization': `token ${process.env.token}`
-            }
+            headers: commonHeaders
         });
         if (promise.status == 404) {
             return {
@@ -55,10 +53,7 @@ const listFollowing = async(userName) => {
     try {
         promise = await fetch(`https://api.github.com/users/${userName}/following`, {
             method: 'get',
-            headers: {
-                'accept': 'application/vnd.github.v3+json',
-                'Authorization': `token ${process.env.token}`
-            }
+            headers: commonHeaders
         });
         if (promise.status == 404) {
             return {
@@ -81,10 +76,7 @@ const AFollowsB = async(followerToCheck, hisSupreme) => {
         promise = await fetch(
             `https://api.github.com/users/${followerToCheck}/following/${hisSupreme}`, {
                 method: 'get',
-                headers: {
-                    'accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${process.env.token}`
-                }
+                headers: commonHeaders
             });
         if (promise.status == 204) {
             return true;

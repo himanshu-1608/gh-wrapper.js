@@ -21,36 +21,45 @@ const testUserModule = async _ => {
     // } else {
     //     console.log(`Either username entered are wrong or he is not following hisSupreme`);
     // }
-    setTimeout(testRepoModule, 2000);
+    setTimeout(testRepoModule, 0);
 };
 
 //Repo Module Testing
 
 const testRepoModule = async _ => {
-    const repoList = await ghClient.getRepoListOfUser('himanshu-1608');
-    console.log(repoList);
-    // await ghClient.getRepoListOfOrg('muskemteers');
-    // await ghClient.getRepoContributors('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoCollaborators('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoDetail('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoLangs('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoTopics('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoCommits('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoReadme('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoForks('himanshu-1608', 'OurSQL');
-    // await ghClient.getRepoHostingPage('muskemteers', 'OurSQL');
-
-    // setTimeout(testOrgModule, 2000);
+    // const repoList = await ghClient.getRepoListOfUser('himanshu-1608');
+    // console.log(repoList);
+    // const repoList = await ghClient.getRepoListOfOrg('muskemteers');
+    // console.log(repoList);
+    // const repoConts = await ghClient.getRepoContributors('himanshu-1608', 'OurSQL');
+    // console.log(repoConts);
+    // const repoCols = await ghClient.getRepoCollaborators('muskemteers', 'OurSQL');
+    // console.log(repoCols);
+    // const repoData = await ghClient.getRepoDetail('himanshu-1608', 'OurSQL');
+    // console.log(repoData);
+    // const repoLangList = await ghClient.getRepoLangs('himanshu-1608', 'OurSQL');
+    // console.log(repoLangList);
+    // const repoTopicList = await ghClient.getRepoTopics('himanshu-1608', 'gh-wrapper.js');
+    // console.log(repoTopicList);
+    // const repoCommitList = await ghClient.getRepoCommits('himanshu-1608', 'gh-wrapper.js');
+    // console.log(repoCommitList);
+    // const readMe = await ghClient.getRepoReadme('himanshu-1608', 'gh-wrapper.js');
+    // console.log(readMe);
+    // const forks = await ghClient.getRepoForks('muskemteers', 'OurSQL');
+    // console.log(forks);
+    // const hostingPage = await ghClient.getRepoHostingPage('muskemteers', 'OurSQL');
+    // console.log(hostingPage);
+    setTimeout(testOrgModule, 0);
 };
 
 //Orgs Module Testing
 
 const testOrgModule = async _ => {
     await ghClient.getOrgDetails('muskemteers');
-    await ghClient.getUserOrgs('himanshu-1608');
-    await ghClient.getOrgAllMembers('muskemteers');
+    // await ghClient.getUserOrgs('himanshu-1608');
+    // await ghClient.getOrgAllMembers('muskemteers');
 
-    setTimeout(testProjectModule, 2000);
+    // setTimeout(testProjectModule, 2000);
 };
 
 //Projects Module Testing
