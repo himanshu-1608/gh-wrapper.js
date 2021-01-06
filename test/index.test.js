@@ -102,10 +102,12 @@ const testActivityModule = async _ => {
 //Gist Module Testing
 
 const testGistModule = async _ => {
-    await ghClient.getGistById('wq3kjg324');
-    await ghClient.getListOfUserGists('himanshu-1608');
+    // const gistData = await ghClient.getGistById('4deac4826ae5f05c5f6ab0ce9d73fb73');
+    // console.log(gistData);
+    // const userGists = await ghClient.getListOfUserGists('himanshu-1608');
+    // console.log(userGists);
 
-    setTimeout(testMarkdownModule, 2000);
+    setTimeout(testMarkdownModule, 0);
 };
 
 //Markdown Module Testing
