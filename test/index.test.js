@@ -67,18 +67,21 @@ const testOrgModule = async _ => {
 //Projects Module Testing
 
 const testProjectModule = async _ => {
-    await ghClient.getListOfOrgProjects('muskemteers');
-    await ghClient.getListOfUserProjects('himanshu-1608');
+    // const orgProjects = await ghClient.getListOfOrgProjects('microsoft');
+    // console.log(orgProjects);
+    // const userProjects = await ghClient.getListOfUserProjects('mostlypanda');
+    // console.log(userProjects);
 
-    setTimeout(testActionsModule, 2000);
+    setTimeout(testActionsModule, 0);
 };
 
 //Actions Module Testing
 
 const testActionsModule = async _ => {
-    await ghClient.getListOfWorkflows('himanshu-1608', 'gh-wrapper.js');
+    // const workflows = await ghClient.getListOfWorkflows('himanshu-1608', 'gh-wrapper.js');
+    // console.log(workflows);
 
-    setTimeout(testActivityModule, 2000);
+    setTimeout(testActivityModule, 0);
 };
 
 //Activity Module Testing
